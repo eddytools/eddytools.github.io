@@ -1,0 +1,35 @@
+<view title="quiz.title">
+  <content has-header="true" padding="true">
+    <section class="quiz-view">
+     <div id="quizArea" > 
+      <!-- QUESTION -->
+
+      <div class="jumbotron">
+        <div class="container">
+          <div style="display:none"><input type="checkbox" ng-model='qFlag' /></div>
+          <h3 id="qNoLbl">Question: {{currentPosition+1}}/{{quiz.questions.length}}</h3>
+          <p id="questionText" ng-bind-html="currentQuestion.statement"></p>
+        </div>
+      </div>
+
+     <input style="display:none" type="text" ng-model="currentResponse">
+      <div class="container">
+          <label ng-repeat="option in currentQuestion.options">
+            <table><tr>
+                <td width="20px" valign="top"><input type="radio" name="group" value="{{option[0]}}" ng-model="$parent.$parent.currentResponse">&nbsp;</td>
+                <td><label id='answers' ng-bind-html="option[1]">1</label></td>
+            </tr></table>
+         </label>
+      </div>
+    </section>
+  </content>
+  <div class="bar bar-footer bar-royal">
+    <div class="button-bar">
+      <button class="button ion-arrow-left-b"  ng-click="submitAns(currentQuestion.id,-1)">&nbsp;</button>
+      <button class="button ion-clipboard"  ng-click="submitAns(currentQuestion.id,0)">&nbsp;Review</button>
+      <button class="button ion-arrow-right-b"  ng-click="submitAns(currentQuestion.id,1)">&nbsp;</button>
+    </div>
+  </div>
+</view>
+
+

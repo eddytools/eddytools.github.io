@@ -1,0 +1,26 @@
+<view title="quiz.name">
+  <content has-header="true" padding="true">
+      <div class="jumbotron">
+        <div class="container" >
+        <h3 id="qNoLbl"><center>REVIEW RESULT {{score}}/{{total}} : {{percent}}<center></h3>
+        <center>
+          <button class="button button-small icon ion-arrow-right-b" ng-click="backtoMain()"> Back to My Quiz Index </button>
+        </center>
+        <br>
+        
+        <center><div google-chart chart="chart" style="{{chart.cssStyle}}"/></center>
+        <list>       
+          <item ng-repeat="atmsq in attempt.seq">
+            {{$index+ 1}} - {{(attempt.attempt[atmsq].attempt=="") && ' Not Attempted' || ' Attempted'}} {{(attempt.attempt[atmsq].qFlag==true) && '- Flagged ' || ''}}
+            {{(attempt.attempt[atmsq].correct==attempt.attempt[atmsq].attempt) && ' - Correct ✓  ' || ' - Wrong ✘  '}}
+          </item>
+        </list>
+        <center>
+          <button class="button button-small icon ion-arrow-right-b" ng-click="backtoMain()"> Back to My Quiz Index </button>
+        </center>
+        </div>
+      </div>  
+  </content>
+</view>
+
+

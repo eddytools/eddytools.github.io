@@ -1,0 +1,16 @@
+<!-- 
+  This template gets placed in the Pet tab's <nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+
+<view title="'My Quiz'">
+  <content has-header="true" has-tabs="true">
+    <list>
+      <item ng-repeat="quiz in quizes" type="item-text-wrap" href="#/quiz/{{quiz.id}}">
+        <h3>{{quiz.title}}</h3>
+       </item>
+      </item>
+    </list>
+  </content>
+</view>

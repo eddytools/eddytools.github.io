@@ -1,0 +1,24 @@
+<view title="quiz.name">
+  <content has-header="true" padding="true">
+      <div class="jumbotron">
+        <div class="container" >
+        <h3 id="qNoLbl"><center>REVIEW ATTEMPT<center></h3>
+        <div class="button-bar ">
+          <a class="button button-small"  href="#/main/{{qid}}">&nbsp;&nbsp;Back to quiz</a>
+          <a class="button button-small" ng-click="endExam(true)">Submit quiz&nbsp;</a>
+        </div>
+        
+        <br>
+        <list>
+          <item  ng-repeat="atmsq in attempt.seq"  ng-click="backtoQuiz($index)">
+            <h3>{{$index+ 1}} - {{(attempt.attempt[atmsq].attempt=="") && 'Not Attempted' || 'Attempted'}} {{(attempt.attempt[atmsq].qFlag==true) && '- Flagged ' || ''}}</h3>
+          </item>
+        </list>
+        <div class="button-bar">
+          <a class="button button-small"  href="#/main/{{qid}}">&nbsp;&nbsp;Back to quiz</a>
+          <a class="button button-small" ng-click="endExam(true)">Submit quiz&nbsp</a>
+        </div>
+        </div>
+      </div>  
+  </content>
+</view>

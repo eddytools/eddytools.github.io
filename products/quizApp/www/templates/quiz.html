@@ -1,0 +1,24 @@
+
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+
+<tabs tabs-style="tabs-icon-top" tabs-type="tabs-default">
+  <!-- Prev Tab -->
+  <tab title="Prev" icon="icon ion-arrow-left-b" href="#/quiz/main/{{qid}}">
+    <nav-view name="quiz-tab"></nav-view>
+  </tab>
+
+  <tab title="Review & Submit" icon="icon ion-clipboard" href="#/quiz/review/{{qid}}">
+    <nav-view name="review-tab" ></nav-view>
+  </tab>
+
+  <!-- Next Tab -->
+  <tab title="Next" icon="icon ion-arrow-right-b" href="#/quiz/main/{{qid}}">
+    <nav-view name="quiz-tab"></nav-view>
+  </tab>
+
+
+</tabs>

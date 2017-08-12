@@ -1,0 +1,18 @@
+<!--
+  This template loads for the 'tab.pet-detail' state (app.js)
+  'pet' is a $scope variable created in the PetCtrl controller (controllers.js)
+  The PetCtrl pulls data from the Pets service (service.js)
+  The Pets service returns an array of pet data
+-->
+<view title="quiz.title">
+  <content has-header="true" padding="true">
+    
+    <label ng-bind-html="quiz.instruction"></label>
+    <p>
+    <center>
+      <a class="button button-small" href="#/tab/myquiz">&nbsp;&nbsp; Back&nbsp;&nbsp;</a>
+      <a class="button button-small" href="#/main/{{quiz.id}}">Start Quiz</a>
+    </center>
+    </p>
+  </content>
+</view>

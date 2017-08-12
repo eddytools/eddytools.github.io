@@ -1,0 +1,12 @@
+/* Your app's CSS, go crazy, make it your own */
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  height: 96px;
+}
+
+.bullet{
+  padding:0px 10px;
+  list-style: square;
+}
